@@ -1,0 +1,176 @@
+/* There are 4 types of display value in CSS 
+Block
+Inline
+Block-inline
+None :-it takes that element out of the flow and it's as if it never existed (similar "visibility: hidden;" it makes that element disappear but it keeps it's original position and all the other elements still flow around it as if it's still there)
+*/
+
+/* ****Common Block Elements in CSS Display Property****
+Paragraphs(<p>)
+Headers(<h1>through<h6>)
+Divisions(<div>)
+Lists and list items(<ol>,<ul>, and <li>)
+Forms(<form>)
+*/
+
+/* ****Common Inline Elements in CSS Display Property****
+Spans(<span>)
+Images(<img>)
+Anchors(<a>)
+*/
+/* We can define the display property of block elements as "inline" and display property of inline elements as "block" */
+/* "inline-block" display property allows us to change the width and as well as inline property */
+
+a {
+    color: #11999E;
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px 20px;
+    text-decoration: none;
+}
+a:hover {
+    color: #EAF6F6;
+}
+body {
+    margin: 0;  /* It means all four sides have margin 0px */
+    text-align: center;  /* It will centre everything inside the body that dosen't have a width set */
+    /*font-family: verdana, san-serif; *//* By default "serif" font-family is used. For most browsers, the default "serif" is the "The Times Font" and default "sans-serif" is "Arial". */
+    /* In font-family, browser will try and render all the text in the Verdana font and if for some reason the browser or the operating system that the user's using doesn't have this font installed then it will default to whatever is the sans-serif font that is installed on their system. */
+    font-family: 'Merriweather', serif;
+    color: #40514E;
+}
+h1 {
+      /* When the value is 0 then we don't reqire to write the units */
+    width: 90%;
+    /*margin: 0 auto 0 auto; */ /* top, right, bottom, left */
+    /*margin: 0 auto; */ /* top and bottom, left and right */ /* If we have 3 values then first value is for top, second value is for left & right, third value is for bottom */
+    margin: 50px auto 0 auto;  /* For margin and padding purpose always use 'px' bcoz it gives more clarity. */
+
+    font-family: 'Sacramento', cursive;
+     
+    /*font-size: 90px; */ /* 90px is not a dynamic size, i.e if we change the default font size in our browser than it's font-size will remain same as 90px */
+    /* To make font-size dynamic there are 2 methods. (So it's size will also change if we change the default font-size in out browser) */
+    /*font-size: 562.5%; */ /* 100%=16px, 90px/16*100=562.5% */
+    /*font-size: 5.625em; */ /* 1em=16px=100%, 90px=90/16em=5.625em */
+    /**** When we use 'em' or '%' then that value is inherited from the body font-size. But if we write in 'px' then it's not inherited bcoz 'px' are static sizes.****/
+    font-size: 5.625rem; /* ALWAYS USE IT. In latest version of CSS (CSS3) it is used and it's not inherited also dynamic. */
+    color: #66BFBF;
+    /*line-height: 2; */ /* Single value with no units at all */
+}
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #66BFBF;
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #11999E;
+}
+p {
+    line-height: 2;
+}
+hr {
+    border: dotted #EAF6F6 6px;
+    border-bottom: none;
+    width: 4%;
+    margin: 100px auto;
+}
+
+.top-container {
+    background-color: #EAF6F6;
+    position: relative;
+    padding-top: 100px;
+}
+
+/* Relative Position is a position that's relative to where the element would have been had we followed the natural & by using it element will as before as in flow of document (or in simple way Relative Position refers to the position relative to it's previous position) */
+/* Absolute Positoning refers to position the element relative to it's parent & by using it elements will be out of the flow of document */
+/* Fixed Positioning keeps our element to selected position even if we scroll throughout the webpage */
+
+.pro {
+    text-decoration: underline;
+}
+.bottom-cloud {
+    position: absolute;
+    left: 250px;
+    bottom: 300px;
+    
+}
+.top-cloud {
+    position: absolute;
+    right: 300px;
+    top: 40px;
+}
+
+.middle-container {
+    margin: 100px 0;
+    
+}
+.bottom-container {
+    background-color: #66BFBF;
+    padding: 50px 0 20px;
+}
+.skill-row {
+    width: 50%;
+    margin: 100px auto;
+    text-align: left;
+    
+}
+.computer-img {
+    width: 25%;
+    float: left;
+    margin-right: 30px;
+}
+.chilli-img {
+    width: 25%;
+    float: right;
+    margin-left: 30px;
+}
+.intro {
+    width: 30%;
+    margin: auto;
+}
+.contact-message {
+    width: 40%;
+    margin: 40px auto;
+}
+.btn {
+    background: #30e3cb;
+    background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+  
+.btn:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+}
+.copyright {
+    color: #EAF6F6;
+    font-size: 0.75rem;
+    padding: 20px 0;
+}
+
+/*
+.computer-img-description {
+    clear: left;
+}
+.chilli-img-description {
+    clear: right;
+}
+*/
